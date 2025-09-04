@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula Virtual - Portal de Ingreso Universitario</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <!-- Pantalla de carga -->
+  <div class="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="container">
+    <div id="canvas-container"></div>
+    
+    <div class="overlay">
+      <div class="header">
+        <h1>🏫 Aula Virtual de Ingreso</h1>
+        <p>Portal informativo para ingresantes universitarios</p>
+      </div>
+      
+      <div class="control-panel">
+        <button class="info-button" onclick="showInfo('fechas')" aria-label="Fechas importantes">📅 Fechas Importantes</button>
+        <button class="info-button" onclick="showInfo('requisitos')" aria-label="Requisitos de ingreso">📋 Requisitos</button>
+        <button class="info-button" onclick="showInfo('materias')" aria-label="Materias de nivelación">📚 Materias</button>
+        <button class="info-button" onclick="showInfo('contacto')" aria-label="Contacto">📞 Contacto</button>
+      </div>
+
+      <div id="fechas-info" class="info-display">
+        <h3>Fechas Importantes del Ingreso 2024</h3>
+        <p>📅 <strong>Inscripciones:</strong> 15 de Enero - 28 de Febrero</p>
+        <p>📅 <strong>Curso de Nivelación:</strong> 1 de Marzo - 30 de Abril</p>
+        <p>📅 <strong>Exámenes de Ingreso:</strong> 5-10 de Mayo</p>
+        <p>📅 <strong>Publicación Resultados:</strong> 15 de Mayo</p>
+        <p>📅 <strong>Inicio Clases:</strong> 1 de Junio</p>
+      </div>
+
+      <div id="requisitos-info" class="info-display">
+        <h3>Requisitos de Ingreso</h3>
+        <p>✅ Documento de identidad (DNI)</p>
+        <p>✅ Título secundario legalizado</p>
+        <p>✅ Certificado de estudios secundarios</p>
+        <p>✅ 2 Fotos 4x4 color</p>
+        <p>✅ Certificado médico</p>
+        <p>✅ Formulario de inscripción completo</p>
+      </div>
+
+      <div id="materias-info" class="info-display">
+        <h3>Materias del Curso de Nivelación</h3>
+        <p>🧮 <strong>Matemática:</strong> Álgebra, Trigonometría, Cálculo</p>
+        <p>🔬 <strong>Física:</strong> Mecánica, Termodinámica</p>
+        <p>🧪 <strong>Química:</strong> General, Orgánica</p>
+        <p>💻 <strong>Informática:</strong> Programación Básica</p>
+        <p>📝 <strong>Comunicación:</strong> Redacción, Oratoria</p>
+      </div>
+
+      <div id="contacto-info" class="info-display">
+        <h3>Contacto y Ayuda</h3>
+        <p>📧 <strong>Email:</strong> ingreso@universidad.edu.ar</p>
+        <p>📞 <strong>Teléfono:</strong> (011) 1234-5678</p>
+        <p>🏢 <strong>Dirección:</strong> Av. Universidad 1234, CABA</p>
+        <p>⏰ <strong>Horario:</strong> Lunes a Viernes 8:00-18:00</p>
+        <p>🌐 <strong>Web:</strong> www.universidad.edu.ar/ingreso</p>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <button class="nav-button" onclick="moveCamera('forward')" title="Adelante">↑ Adelante</button>
+      <button class="nav-button" onclick="moveCamera('backward')" title="Atrás">↓ Atrás</button>
+      <button class="nav-button" onclick="moveCamera('left')" title="Izquierda">← Izquierda</button>
+      <button class="nav-button" onclick="moveCamera('right')" title="Derecha">→ Derecha</button>
+    </div>
+  </div>
+</body>
+</html>
