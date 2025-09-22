@@ -57,6 +57,17 @@ body {
   font-size: 0.9rem;
 }
 
+/* First-person instructions */
+.instructions {
+  margin-top: 10px;
+  background: rgba(255,255,255,0.04);
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #ecf0f1;
+  outline: none;
+}
+
 /* Botones de control */
 .control-panel {
   display: grid;

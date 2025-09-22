@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/PointerLockControls.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/utils/SkeletonUtils.js"></script>
   <script src="main.js"></script>
 </head>
 <body>
@@ -23,6 +26,7 @@
         <h1>🏫 Aula Virtual de Ingreso</h1>
         <p>Portal informativo para ingresantes universitarios</p>
       </div>
+  <div id="instructions" class="instructions" tabindex="0">Click para entrar en primera persona — WASD para mover, Espacio para saltar, Esc para salir</div>
       
       <div class="control-panel">
         <button class="info-button" onclick="showInfo('fechas')" aria-label="Fechas importantes">📅 Fechas Importantes</button>
